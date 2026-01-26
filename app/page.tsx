@@ -183,10 +183,25 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-96 bg-secondary rounded-2xl flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <div className="text-6xl">💎</div>
-                <p className="text-muted-foreground font-serif text-xl">Crafted Excellence</p>
-              </div>
+            <div className="relative h-96 rounded-2xl overflow-hidden">
+  {/* Hero Image */}
+  <img
+    src="/hero2.jpg"
+    alt="Dee’s Scents Crafted Excellence"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+
+  {/* Subtle overlay for contrast */}
+  <div className="absolute inset-0 bg-black/20" />
+
+  {/* Optional overlay text */}
+  <div className="relative z-10 flex items-center justify-center h-full">
+    {/* <p className="text-white font-serif text-xl">
+      Crafted Excellence
+    </p> */}
+  </div>
+</div>
+
             </div>
             <div className="space-y-6">
               <div>

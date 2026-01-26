@@ -168,9 +168,9 @@ export default function Home() {
 
   {/* Optional overlay text (can remove if you want image-only) */}
   <div className="relative z-10 flex items-center justify-center h-full">
-    <p className="text-white font-serif text-xl">
+    {/* <p className="text-white font-serif text-xl">
       Premium Fragrances
-    </p>
+    </p> */}
   </div>
 </div>
 

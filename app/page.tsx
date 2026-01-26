@@ -155,12 +155,25 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="relative h-96 md:h-full bg-muted rounded-2xl flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <div className="text-6xl">✨</div>
-                <p className="text-muted-foreground font-serif text-xl">Premium Fragrances</p>
-              </div>
-            </div>
+         <div className="relative h-96 md:h-full rounded-2xl overflow-hidden">
+  {/* Hero Image */}
+  <img
+    src="/hero.jpg"
+    alt="Dee’s Scents Premium Fragrances"
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+
+  {/* Optional overlay for readability / luxury feel */}
+  <div className="absolute inset-0 bg-black/20" />
+
+  {/* Optional overlay text (can remove if you want image-only) */}
+  <div className="relative z-10 flex items-center justify-center h-full">
+    <p className="text-white font-serif text-xl">
+      Premium Fragrances
+    </p>
+  </div>
+</div>
+
           </div>
         </div>
       </section>

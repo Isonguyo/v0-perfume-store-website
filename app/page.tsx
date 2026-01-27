@@ -178,35 +178,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative h-96 bg-secondary rounded-2xl flex items-center justify-center">
-            <div className="relative h-96 rounded-2xl overflow-hidden">
-            <div className="flex flex-col items-center justify-center text-center space-y-3">
-             <div className="relative h-96 rounded-2xl overflow-hidden">
-  <img src="/hero2.jpg"alt="Dee’s Scents Crafted Excellence"className="w-full h-full object-cover" /> </div>
-              <p className="font-serif text-xl text-muted-foreground tracking-wide">
-                Crafted Excellence
-              </p>
-            </div>
+    {/* About Section */}
+<section id="about" className="py-20 bg-card">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-            </div>
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-serif text-4xl font-bold text-foreground mb-4">About Dee's Scents</h3>
-                <p className="text-muted-foreground leading-relaxed text-lg mb-4">
-                  At Dee's Scents, we believe that fragrance is a form of self-expression. Our carefully curated collection features premium fragrances made with authentic ingredients, designed to last and leave a lasting impression.
-                </p>
-                <p className="text-muted-foreground leading-relaxed text-lg">
-                  Each scent tells a story of sophistication and elegance. Whether you're looking for everyday elegance or a special occasion fragrance, we have the perfect scent to define your unique personality.
-                </p>
-              </div>
-            </div>
-          </div>
+      {/* Image Side */}
+      <div className="relative h-96 rounded-2xl overflow-hidden">
+        <img
+          src="/hero2.jpg"
+          alt="Dee’s Scents Crafted Excellence"
+          className="w-full h-full object-cover"
+        />
+
+        {/* Optional overlay */}
+        <div className="absolute inset-0 bg-black/20" />
+
+        {/* Optional caption */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <p className="font-serif text-xl text-white tracking-wide">
+            Crafted Excellence
+          </p>
         </div>
-      </section>
+      </div>
+
+      {/* Text Side */}
+      <div className="space-y-6">
+        <h3 className="font-serif text-4xl font-bold text-foreground">
+          About Dee&apos;s Scents
+        </h3>
+
+        <p className="text-muted-foreground leading-relaxed text-lg">
+          At Dee&apos;s Scents, we believe that fragrance is a form of
+          self-expression. Our carefully curated collection features premium
+          fragrances made with authentic ingredients, designed to last and leave
+          a lasting impression.
+        </p>
+
+        <p className="text-muted-foreground leading-relaxed text-lg">
+          Each scent tells a story of sophistication and elegance. Whether
+          you&apos;re looking for everyday elegance or a special occasion
+          fragrance, we have the perfect scent to define your unique personality.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* Featured Products */}
       <section id="collections" className="py-20 bg-background">

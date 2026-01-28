@@ -19,7 +19,7 @@ const products = [
   {
     id: 1,
      name: 'HUG Body Spray',
-    category: 'Fresh',
+    category: 'fresh',
     description: 'Top: Citrus Zest | Middle: Lavender | Base: Soft Musk',
     price: '₦3,000',
     image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769597582/Hug_qyavmi.jpg',
@@ -27,15 +27,15 @@ const products = [
   {
     id: 2,
    name: 'Storm Kids Perfume',
-    category: 'Sweet',
+    category: 'sweet',
     description: 'Top: Fruity Candy | Middle: Soft Floral | Base: Vanilla Musk',
     price: '₦2,500',
     image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769597594/storm-kids_yontcw.jpg',
   },
   {
     id: 3,
-   name: '24K',
-  category: 'Oriental',
+     name: '24K',
+    category: 'oriental',
     description: 'Top: Bergamot | Middle: Spiced Amber | Base: Oud & Vanilla',
     price: '₦5,000',
     image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769597605/24k-image_jcd8ik.jpg',
@@ -43,7 +43,7 @@ const products = [
   {
     id: 4,
     name: 'Lasgidi Body Mist',
-    category: 'Fresh',
+    category: 'fresh',
     description: 'Top: Citrus Zest | Middle: Aquatic Notes | Base: Soft Musk',
     price: '₦2,000,
     image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769622900/lasgidi_fzxrow.jpg',
@@ -51,7 +51,7 @@ const products = [
   {
     id: 5,
     name: 'Riggs London',
-    category: 'Woody',
+    category: 'woody',
     description: 'Top: Bergamot | Middle: Lavender & Spices | Base: Cedarwood & Musk',
     price: '₦3,000',
     image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769623053/riggs_byzmym.jpg',
@@ -59,7 +59,7 @@ const products = [
   {
     id: 6,
    name: 'Fogg Fragrance',
-    category: 'Fresh',
+    category: 'fresh',
     description: 'Top: Citrus & Green Notes | Middle: Aromatic Herbs | Base: Musk & Cedarwood',
     price: '₦3,500',
     image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769623300/fogg_iv3jkz.jpg',

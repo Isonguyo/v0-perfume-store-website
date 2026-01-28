@@ -11,6 +11,7 @@ const categories = [
   { value: 'oriental', label: 'Oriental' },
   { value: 'fresh', label: 'Fresh' },
   { value: 'unisex', label: 'Unisex' },
+  { value: 'sweet', label: 'Sweet' },
 ]
 
 const WHATSAPP_NUMBER = '2347012268966'
@@ -76,7 +77,9 @@ export default function CollectionsPage() {
       {/* Page Header */}
       <section className="bg-secondary border-b border-border py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="font-serif text-4xl font-bold text-foreground mb-2">Our Collections</h1>
+          <h1 className="font-serif text-4xl font-bold text-foreground mb-2">
+            Our Collections
+          </h1>
           <p className="text-muted-foreground text-lg">
             Discover luxury fragrances that match your personality and style
           </p>
@@ -179,32 +182,52 @@ export default function CollectionsPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filteredProducts.map((product) => (
-                    <div key={product.id} className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition">
-                      <div className="h-48 bg-secondary flex items-center justify-center relative">
+                    <div
+                      key={product.id}
+                      className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition"
+                    >
+                      {/* IMAGE BLOCK (REPLACED EMOJI) */}
+                      <div className="h-48 bg-secondary relative overflow-hidden">
                         {product.new && (
-                          <span className="absolute top-3 right-3 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                          <span className="absolute top-3 right-3 z-10 bg-accent text-accent-foreground px-3 py-1 rounded-full text-xs font-semibold">
                             New
                           </span>
                         )}
+
                         {product.bestseller && (
-                          <span className="absolute top-3 right-3 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                          <span className="absolute top-3 left-3 z-10 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
                             Bestseller
                           </span>
                         )}
-                        <div className="text-4xl">🌸</div>
+
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="h-full w-full object-cover"
+                        />
                       </div>
 
                       <div className="p-6 space-y-3">
                         <p className="text-xs font-semibold text-primary uppercase tracking-wider">
                           {categories.find((c) => c.value === product.category)?.label}
                         </p>
+
                         <h4 className="font-serif text-xl font-bold text-foreground">
-                          <Link href={`/product/${product.id}`} className="hover:text-primary transition">
+                          <Link
+                            href={`/product/${product.id}`}
+                            className="hover:text-primary transition"
+                          >
                             {product.name}
                           </Link>
                         </h4>
-                        <p className="text-sm text-muted-foreground">{product.description}</p>
-                        <p className="text-lg font-semibold text-accent pt-2">{product.price}</p>
+
+                        <p className="text-sm text-muted-foreground">
+                          {product.description}
+                        </p>
+
+                        <p className="text-lg font-semibold text-accent pt-2">
+                          {product.price}
+                        </p>
 
                         <div className="space-y-2 pt-4">
                           <Link
@@ -213,8 +236,11 @@ export default function CollectionsPage() {
                           >
                             View Details
                           </Link>
+
                           <a
-                            href={whatsappLink(`Hello, I'd like to order ${product.name} from Dee's Scents.`)}
+                            href={whatsappLink(
+                              `Hello, I would like to order the following product from Dee's Scents.\n\nProduct Name: ${product.name}\nPrice: ${product.price}\n\nProduct Image:\n${product.image}\n\nPlease confirm availability and next steps.`
+                            )}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="block w-full bg-primary text-primary-foreground text-center py-2 rounded-lg font-medium hover:opacity-90 transition"

@@ -31,7 +31,6 @@ Please let me know availability. Thank you!
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
 }
 
-}
 
 const products = [
   {

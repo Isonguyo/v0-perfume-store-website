@@ -8,28 +8,11 @@ import { useState } from 'react'
 
 const WHATSAPP_NUMBER = '2347012268966'
 
-const whatsappLink = ({
-  name,
-  price,
-  image,
-}: {
-  name: string
-  price: string
-  image: string
-}) => {
-  const message = `
-Hello 👋
-I would like to order this product from Dee's Scents.
-
-🧴 Product Name: ${name}
-💰 Price: ${price}
-🖼️ Image: ${image}
-
-Please let me know availability. Thank you!
-  `.trim()
-
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+const whatsappLink = (message: string) => {
+  const encoded = encodeURIComponent(message)
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`
 }
+
 
 
 const products = [
@@ -294,12 +277,22 @@ export default function Home() {
           {product.price}
         </p>
 
-      <a
-  href={whatsappLink({
-    name: product.name,
-    price: product.price,
-    image: product.image,
-  })}
+    <a
+  href={whatsappLink(
+    `Hello,
+
+I would like to purchase the following product from Dee's Scents.
+
+Product Name: ${product.name}
+Price: ${product.price}
+
+Product Image:
+${product.image}
+
+Please confirm availability and the next steps for ordering.
+
+Thank you.`
+  )}
   target="_blank"
   rel="noopener noreferrer"
   className="block w-full bg-primary text-primary-foreground text-center py-2 rounded-lg font-medium hover:opacity-90 transition mt-4"

@@ -8,9 +8,29 @@ import { useState } from 'react'
 
 const WHATSAPP_NUMBER = '2347012268966'
 
-const whatsappLink = (message: string) => {
-  const encoded = encodeURIComponent(message)
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`
+const whatsappLink = ({
+  name,
+  price,
+  image,
+}: {
+  name: string
+  price: string
+  image: string
+}) => {
+  const message = `
+Hello 👋
+I would like to order this product from Dee's Scents.
+
+🧴 Product Name: ${name}
+💰 Price: ${price}
+🖼️ Image: ${image}
+
+Please let me know availability. Thank you!
+  `.trim()
+
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+}
+
 }
 
 const products = [
@@ -19,7 +39,7 @@ const products = [
      name: 'HUG Body Spray',
     category: 'Fresh',
     description: 'Top: Citrus Zest | Middle: Lavender | Base: Soft Musk',
-    price: '₦3000',
+    price: '₦3,000',
     image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769597582/Hug_qyavmi.jpg',
   },
   {
@@ -35,32 +55,32 @@ const products = [
    name: '24K',
   category: 'Oriental',
     description: 'Top: Bergamot | Middle: Spiced Amber | Base: Oud & Vanilla',
-    price: '₦5000',
+    price: '₦5,000',
     image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769597605/24k-image_jcd8ik.jpg',
   },
   {
     id: 4,
-    name: 'Ocean Breeze',
+    name: 'Lasgidi Body Mist',
     category: 'Fresh',
-    description: 'Top: Citrus | Middle: Sea Salt | Base: Driftwood',
-    price: '₦7,500',
-    image: '/products/velvet-rose.jpg',
+    description: 'Top: Citrus Zest | Middle: Aquatic Notes | Base: Soft Musk',
+    price: '₦2,00',
+    image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769622900/lasgidi_fzxrow.jpg',
   },
   {
     id: 5,
-    name: 'Unisex Essence',
-    category: 'Unisex',
-    description: 'Top: Lemon | Middle: Iris | Base: Vetiver',
-    price: '₦8,200',
-    image: '/products/velvet-rose.jpg',
+    name: 'Riggs London',
+    category: 'Woody',
+    description: 'Top: Bergamot | Middle: Lavender & Spices | Base: Cedarwood & Musk',
+    price: '₦3,000',
+    image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769623053/riggs_byzmym.jpg',
   },
   {
     id: 6,
-    name: 'Golden Bloom',
-    category: 'Floral',
-    description: 'Top: Ylang-Ylang | Middle: Jasmine | Base: Vanilla',
-    price: '₦8,500',
-    image: '/products/velvet-rose.jpg',
+   name: 'Fogg Fragrance',
+    category: 'Fresh',
+    description: 'Top: Citrus & Green Notes | Middle: Aromatic Herbs | Base: Musk & Cedarwood',
+    price: '₦3,500',
+    image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769623300/fogg_iv3jkz.jpg',
   },
 ]
 
@@ -275,16 +295,19 @@ export default function Home() {
           {product.price}
         </p>
 
-        <a
-          href={whatsappLink(
-            `Hello, I'd like to order ${product.name} from Dee's Scents.`
-          )}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full bg-primary text-primary-foreground text-center py-2 rounded-lg font-medium hover:opacity-90 transition mt-4"
-        >
-          Order via WhatsApp
-        </a>
+      <a
+  href={whatsappLink({
+    name: product.name,
+    price: product.price,
+    image: product.image,
+  })}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block w-full bg-primary text-primary-foreground text-center py-2 rounded-lg font-medium hover:opacity-90 transition mt-4"
+>
+  Order via WhatsApp
+</a>
+
       </div>
     </div>
   ))}

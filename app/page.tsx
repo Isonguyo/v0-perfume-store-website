@@ -45,7 +45,7 @@ const products = [
     name: 'Lasgidi Body Mist',
     category: 'Fresh',
     description: 'Top: Citrus Zest | Middle: Aquatic Notes | Base: Soft Musk',
-    price: '₦2,00',
+    price: '₦2,000,
     image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769622900/lasgidi_fzxrow.jpg',
   },
   {

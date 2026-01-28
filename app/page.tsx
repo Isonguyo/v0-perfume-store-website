@@ -20,6 +20,7 @@ const products = [
     category: 'Floral',
     description: 'Top: Bulgarian Rose | Middle: Peony | Base: Sandalwood',
     price: '₦8,500',
+    image: '/products/velvet-rose.jpg',
   },
   {
     id: 2,
@@ -27,6 +28,7 @@ const products = [
     category: 'Woody',
     description: 'Top: Black Pepper | Middle: Cedarwood | Base: Oud',
     price: '₦9,500',
+    image: '/products/velvet-rose.jpg',
   },
   {
     id: 3,
@@ -34,6 +36,7 @@ const products = [
     category: 'Oriental',
     description: 'Top: Bergamot | Middle: Amber | Base: Musk',
     price: '₦8,800',
+    image: '/products/velvet-rose.jpg',
   },
   {
     id: 4,
@@ -41,6 +44,7 @@ const products = [
     category: 'Fresh',
     description: 'Top: Citrus | Middle: Sea Salt | Base: Driftwood',
     price: '₦7,500',
+    image: '/products/velvet-rose.jpg',
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ const products = [
     category: 'Unisex',
     description: 'Top: Lemon | Middle: Iris | Base: Vetiver',
     price: '₦8,200',
+    image: '/products/velvet-rose.jpg',
   },
   {
     id: 6,
@@ -55,6 +60,7 @@ const products = [
     category: 'Floral',
     description: 'Top: Ylang-Ylang | Middle: Jasmine | Base: Vanilla',
     price: '₦8,500',
+    image: '/products/velvet-rose.jpg',
   },
 ]
 
@@ -196,9 +202,9 @@ export default function Home() {
 
         {/* Optional caption */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <p className="font-serif text-xl text-white tracking-wide">
+          {/* <p className="font-serif text-xl text-white tracking-wide">
             Crafted Excellence
-          </p>
+          </p> */}
         </div>
       </div>
 
@@ -236,29 +242,53 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.slice(0, 6).map((product) => (
-              <div key={product.id} className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition">
-                <div className="h-48 bg-secondary rounded-lg mb-6 flex items-center justify-center">
-                  <div className="text-4xl">🌸</div>
-                </div>
-                <div className="space-y-3">
-                  <p className="text-xs font-semibold text-primary uppercase tracking-wider">{product.category}</p>
-                  <h4 className="font-serif text-xl font-bold text-foreground">{product.name}</h4>
-                  <p className="text-sm text-muted-foreground">{product.description}</p>
-                  <p className="text-lg font-semibold text-accent pt-2">{product.price}</p>
-                  <a
-                    href={whatsappLink(`Hello, I'd like to order ${product.name} from Dee's Scents.`)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full bg-primary text-primary-foreground text-center py-2 rounded-lg font-medium hover:opacity-90 transition mt-4"
-                  >
-                    Order via WhatsApp
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {products.slice(0, 6).map((product) => (
+    <div
+      key={product.id}
+      className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition"
+    >
+      {/* Product Image */}
+      <div className="h-48 bg-secondary rounded-lg mb-6 overflow-hidden">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Product Info */}
+      <div className="space-y-3">
+        <p className="text-xs font-semibold text-primary uppercase tracking-wider">
+          {product.category}
+        </p>
+
+        <h4 className="font-serif text-xl font-bold text-foreground">
+          {product.name}
+        </h4>
+
+        <p className="text-sm text-muted-foreground">
+          {product.description}
+        </p>
+
+        <p className="text-lg font-semibold text-accent pt-2">
+          {product.price}
+        </p>
+
+        <a
+          href={whatsappLink(
+            `Hello, I'd like to order ${product.name} from Dee's Scents.`
+          )}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full bg-primary text-primary-foreground text-center py-2 rounded-lg font-medium hover:opacity-90 transition mt-4"
+        >
+          Order via WhatsApp
+        </a>
+      </div>
+    </div>
+  ))}
+</div>
 
           <div className="text-center mt-12">
             <Link

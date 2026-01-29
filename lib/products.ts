@@ -1,8 +1,9 @@
 export interface Product {
   id: string
   name: string
-  category: 'floral' | 'woody' | 'oriental' | 'fresh' | 'unisex'
+category: 'floral' | 'woody' | 'oriental' | 'fresh' | 'unisex' | 'sweet'
   price: string
+  image: string
   description: string
   longDescription: string
   notes: {
@@ -19,111 +20,121 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    id: 'velvet-rose',
-    name: 'Velvet Rose',
-    category: 'floral',
-    price: '₦8,500',
-    description: 'Top: Bulgarian Rose | Middle: Peony | Base: Sandalwood',
-    longDescription:
-      'Velvet Rose is a luxurious floral fragrance that captures the essence of romance and elegance. The opening burst of Bulgarian rose immediately sets an opulent tone, transitioning smoothly into the delicate heart of peony. The base of warm sandalwood provides a sensual, lasting finish that makes this fragrance perfect for evening wear or special occasions.',
-    notes: {
-      top: ['Bulgarian Rose', 'Bergamot'],
-      middle: ['Peony', 'Damask Rose'],
-      base: ['Sandalwood', 'Musk', 'Amber'],
-    },
-    longevity: '8-10 hours',
-    projection: 'High',
-    occasions: ['Evening', 'Date Night', 'Special Events'],
-    bestseller: true,
-  },
-  {
-    id: 'midnight-woods',
-    name: 'Midnight Woods',
-    category: 'woody',
-    price: '₦9,500',
-    description: 'Top: Black Pepper | Middle: Cedarwood | Base: Oud',
-    longDescription:
-      'Midnight Woods is a sophisticated woody fragrance for the confident individual. Bold black pepper opens the composition, creating an intriguing spice that gives way to the creamy warmth of cedarwood. The deep oud base ensures this fragrance lingers beautifully, making it ideal for both daytime and evening wear.',
-    notes: {
-      top: ['Black Pepper', 'Cardamom'],
-      middle: ['Cedarwood', 'Vetiver'],
-      base: ['Oud', 'Patchouli', 'Musk'],
-    },
-    longevity: '10-12 hours',
-    projection: 'Very High',
-    occasions: ['Everyday', 'Work', 'Evening'],
-    bestseller: true,
-  },
-  {
-    id: 'amber-enigma',
-    name: 'Amber Enigma',
-    category: 'oriental',
-    price: '₦8,800',
-    description: 'Top: Bergamot | Middle: Amber | Base: Musk',
-    longDescription:
-      'Amber Enigma is a mysterious and alluring oriental fragrance that captivates with its warm, sensual character. Fresh bergamot opens the composition, creating a bright contrast to the rich amber heart. The musky base creates an irresistible lingering scent that works beautifully for both day and night.',
-    notes: {
-      top: ['Bergamot', 'Lemon'],
-      middle: ['Amber', 'Vanilla', 'Tonka Bean'],
-      base: ['Musk', 'Sandalwood', 'Amber'],
-    },
-    longevity: '9-11 hours',
-    projection: 'High',
-    occasions: ['Everyday', 'Evening', 'Date Night'],
-    new: true,
-  },
-  {
-    id: 'ocean-breeze',
-    name: 'Ocean Breeze',
+    id: 'hug-body-spray',
+     name: 'HUG Body Spray',
     category: 'fresh',
-    price: '₦7,500',
-    description: 'Top: Citrus | Middle: Sea Salt | Base: Driftwood',
-    longDescription:
-      'Ocean Breeze brings the freshness of a seaside getaway to your skin. Vibrant citrus notes create an energizing opening, while the unique sea salt accord adds a crisp, salty-aquatic feel. The driftwood base grounds the composition with a soft, natural warmth, making this perfect for everyday wear.',
-    notes: {
-      top: ['Grapefruit', 'Lemon', 'Bergamot'],
-      middle: ['Sea Salt', 'Aquatic Notes'],
-      base: ['Driftwood', 'Cedarwood', 'Ambroxan'],
-    },
-    longevity: '6-8 hours',
-    projection: 'Medium',
-    occasions: ['Everyday', 'Summer', 'Casual'],
-    bestseller: true,
+    description: 'Top: Citrus Zest | Middle: Lavender | Base: Soft Musk',
+    price: '₦3,000',
+    image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769597582/Hug_qyavmi.jpg',
+   longDescription:
+  'HUG Body Spray is a warm, comforting fragrance designed for everyday confidence and freshness. It opens with bright citrus and soft fruity notes that feel welcoming and uplifting. The heart reveals gentle florals blended with subtle spices, giving the scent balance and charm. A smooth base of vanilla, musk, and light woods leaves a cozy, long-lasting trail that feels intimate and reassuring — perfect for daily wear.',
+notes: {
+  top: ['Citrus Zest', 'Fresh Fruits'],
+  middle: ['Soft Floral Notes', 'Light Spices'],
+  base: ['Vanilla', 'Musk', 'Woody Notes'],
+},
+longevity: '6–8 hours',
+projection: 'Moderate',
+occasions: ['Daily Wear', 'Casual Outings', 'School', 'Work'],
+bestseller: true,
   },
   {
-    id: 'unisex-essence',
-    name: 'Unisex Essence',
-    category: 'unisex',
-    price: '₦8,200',
-    description: 'Top: Lemon | Middle: Iris | Base: Vetiver',
-    longDescription:
-      'Unisex Essence is a beautifully balanced fragrance that transcends gender boundaries. Fresh lemon awakens the senses, leading into the sophisticated iris middle note that provides elegance and refinement. The earthy vetiver base creates a grounding finish, making this a versatile choice for any occasion.',
-    notes: {
-      top: ['Lemon', 'Pink Pepper'],
-      middle: ['Iris', 'Orris Root'],
-      base: ['Vetiver', 'Cedarwood', 'Musk'],
-    },
-    longevity: '8-9 hours',
-    projection: 'Medium',
-    occasions: ['Everyday', 'Work', 'Casual'],
+    id: 'storm-kids',
+    name: 'Storm Kids Perfume',
+    category: 'sweet',
+    description: 'Top: Fruity Candy | Middle: Soft Floral | Base: Vanilla Musk',
+    price: '₦2,500',
+    image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769597594/storm-kids_yontcw.jpg',
+  longDescription:
+  'Storm Kids Perfume is a fun, cheerful fragrance created especially for children. It opens with fresh fruity notes that feel playful and energetic, bringing an instant sense of happiness. The heart is soft and clean with light floral and cottony accords that are gentle on young senses. A smooth base of vanilla and soft musk adds warmth and comfort, making Storm Kids Perfume perfect for everyday use without being overpowering.',
+notes: {
+  top: ['Apple', 'Sweet Orange'],
+  middle: ['Soft Floral Notes', 'Cotton Blossom'],
+  base: ['Vanilla', 'Soft Musk'],
+},
+longevity: '4–6 hours',
+projection: 'Soft',
+occasions: ['School', 'Playtime', 'Daily Wear'],
+bestseller: false,
   },
   {
-    id: 'golden-bloom',
-    name: 'Golden Bloom',
-    category: 'floral',
-    price: '₦8,500',
-    description: 'Top: Ylang-Ylang | Middle: Jasmine | Base: Vanilla',
-    longDescription:
-      'Golden Bloom is a luminous floral fragrance that radiates warmth and joy. The sweet, exotic ylang-ylang opens with an intoxicating presence, while creamy jasmine flowers dominate the heart of the fragrance. A tender vanilla base wraps everything in a soft, inviting embrace, making this perfect for those who love sweet florals.',
-    notes: {
-      top: ['Ylang-Ylang', 'Mandarin'],
-      middle: ['Jasmine', 'Tuberose', 'Orange Blossom'],
-      base: ['Vanilla', 'Sandalwood', 'Amber'],
-    },
-    longevity: '9-10 hours',
-    projection: 'High',
-    occasions: ['Everyday', 'Date Night', 'Special Events'],
-    new: true,
+    id: '24k-spray',
+    name: '24K',
+    category: 'oriental',
+    description: 'Top: Bergamot | Middle: Spiced Amber | Base: Oud & Vanilla',
+    price: '₦5,000',
+    image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769597605/24k-image_jcd8ik.jpg',
+  longDescription:
+  '24K Spray is a bold and luxurious fragrance crafted for confident individuals who enjoy making a strong impression. It opens with a vibrant blend of fresh citrus and spicy notes that instantly energize the senses. The heart introduces warm aromatic accords with subtle florals, adding depth and sophistication. A rich base of amber, woody notes, and musk delivers a powerful, long-lasting finish that feels opulent and commanding.',
+notes: {
+  top: ['Bergamot', 'Citrus Notes'],
+  middle: ['Spices', 'Aromatic Herbs'],
+  base: ['Amber', 'Woody Notes', 'Musk'],
+},
+longevity: '7–9 hours',
+projection: 'High',
+occasions: ['Evening', 'Parties', 'Night Out'],
+bestseller: true,
+  },
+  {
+    id: 'lasgidi-body-mist',
+     name: 'Lasgidi Body Mist',
+    category: 'fresh',
+    description: 'Top: Citrus Zest | Middle: Aquatic Notes | Base: Soft Musk',
+    price: '₦2,000',
+    image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769622900/lasgidi_fzxrow.jpg',
+   longDescription:
+  'Lesgadi Body Mist is a lively, playful fragrance inspired by energy, confidence, and everyday vibes. It opens with a burst of juicy fruits and fresh citrus that instantly feels fun and uplifting. The heart blends sweet florals with a soft tropical touch, creating a youthful and expressive character. A smooth base of vanilla and light musk keeps the scent warm and inviting, making it perfect for daily wear and casual outings.',
+
+notes: {
+  top: ['Fresh Citrus', 'Juicy Fruits'],
+  middle: ['Sweet Floral Notes', 'Tropical Accords'],
+  base: ['Vanilla', 'Soft Musk'],
+},
+longevity: '5–7 hours',
+projection: 'Moderate',
+occasions: ['Daily Wear', 'Casual Outings', 'School', 'Hanging Out'],
+bestseller: false,
+  },
+  {
+    id: 'riggs-london',
+     name: 'Riggs London',
+    category: 'woody',
+    description: 'Top: Bergamot | Middle: Lavender & Spices | Base: Cedarwood & Musk',
+    price: '₦3,000',
+    image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769623053/riggs_byzmym.jpg',
+   longDescription:
+  'Riggs London is a refined and modern fragrance inspired by classic British style and urban sophistication. It opens with crisp citrus and fresh aromatic notes that feel sharp and confident. The heart introduces elegant spices and subtle florals, adding depth and balance. A smooth base of amber, woods, and musk creates a polished, long-lasting finish that is both masculine and timeless.',
+
+notes: {
+  top: ['Bergamot', 'Fresh Citrus'],
+  middle: ['Spices', 'Lavender'],
+  base: ['Amber', 'Woody Notes', 'Musk'],
+},
+longevity: '7–9 hours',
+projection: 'Moderate to High',
+occasions: ['Office', 'Formal Events', 'Evening', 'Daily Wear'],
+bestseller: true,
+  },
+  {
+    id: 'fogg-fragrance',
+     name: 'Fogg Fragrance',
+    category: 'fresh',
+    description: 'Top: Citrus & Green Notes | Middle: Aromatic Herbs | Base: Musk & Cedarwood',
+    price: '₦3,500',
+    image: 'https://res.cloudinary.com/dbozz4sgv/image/upload/v1769623300/fogg_iv3jkz.jpg',
+   longDescription: 
+  'Fogg is a bold and charismatic fragrance designed for those who want a noticeable and confident scent without being overpowering. It starts with bright and zesty top notes that immediately catch attention. The heart blends aromatic and slightly spicy elements, giving a balanced and memorable character. A warm base of woods and subtle musk provides depth and a lasting impression that suits everyday wear as well as special occasions.',
+notes: {
+  top: ['Citrus Accord', 'Fresh Spices'],
+  middle: ['Aromatic Florals', 'Warm Spices'],
+  base: ['Woody Notes', 'Musk', 'Amber'],
+},
+longevity: '5–8 hours',
+projection: 'Moderate',
+occasions: ['Casual Outings', 'Daily Wear', 'Office', 'Evening'],
+bestseller: true
+
   },
   {
     id: 'spice-elegance',

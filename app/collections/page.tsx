@@ -14,7 +14,7 @@ const categories = [
   { value: 'sweet', label: 'Sweet' },
 ]
 
-const WHATSAPP_NUMBER = '2347012268966'
+const WHATSAPP_NUMBER = '2349038349100'
 
 const whatsappLink = (message: string) => {
   const encoded = encodeURIComponent(message)

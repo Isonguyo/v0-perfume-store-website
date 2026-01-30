@@ -6,8 +6,8 @@ import Link from 'next/link'
 import { MessageCircle, Mail, Clock } from 'lucide-react'
 import { useState } from 'react'
 
-const WHATSAPP_NUMBER = '2347012268966'
-const CONTACT_EMAIL = 'hello@deescents.com'
+const WHATSAPP_NUMBER = '23419038349100'
+const CONTACT_EMAIL = 'davinadavid@gmail.com'
 
 const whatsappLink = (message: string) => {
   const encoded = encodeURIComponent(message)

@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { Star, Instagram, MessageCircle } from 'lucide-react'
 import { useState } from 'react'
 
-const WHATSAPP_NUMBER = '2347012268966'
+const WHATSAPP_NUMBER = '2349038349100'
 
 const whatsappLink = (message: string) => {
   const encoded = encodeURIComponent(message)
@@ -447,7 +447,7 @@ Thank you.`
             </div>
             <div>
               <h5 className="font-semibold mb-4">Contact</h5>
-              <p className="text-sm text-primary-foreground/70">WhatsApp: +234 701 226 8966</p>
+              <p className="text-sm text-primary-foreground/70">WhatsApp: +234 903 834 9100</p>
             </div>
             <div>
               <h5 className="font-semibold mb-4">Follow Us</h5>
